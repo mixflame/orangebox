@@ -74,8 +74,8 @@
 .cf:after { clear: both; }
 
 .overlay {
-  width: 10000px;
-  height: 10000px;
+  width: 10000px !important;
+  height: 10000px !important;
   display: none;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
