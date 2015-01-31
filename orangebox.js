@@ -1,4 +1,7 @@
 show_msgbox = function(msg, buttons, options) {
+  if($('.orangeBox').size() == 0){
+    $('body').prepend(Blaze.toHTML(Template.orangebox))
+  }
   $('.orangeBoxWindow').css("display", "block");
   $('.overlay').show();
   $('.orangeBox').addClass("orangeBox-show");
