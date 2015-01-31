@@ -12,6 +12,11 @@ show_msgbox = function(msg, buttons, options) {
       $('.'+buttonName.toLowerCase()).click(buttonCallback);
     })
   }
+  if(options!=null){
+    if(options["noClose"] == true) {
+      $('.icon-close').remove();
+    }
+  }
 }
 
 hide_msgbox = function() {

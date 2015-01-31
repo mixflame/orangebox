@@ -9,7 +9,7 @@ add {{>orangebox}} at the beginning of your template
 Call
 
 ```
-show_msgbox("Description", ["Button Name", callback]);
+show_msgbox("Description", [["Button Name", callback]]);
 ```
 
 To hide all messageboxes
