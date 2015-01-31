@@ -28,4 +28,5 @@ hide_msgbox = function() {
   $('.overlay').hide();
   $('ul.orangeBoxButtons').html("");
   $('.orangeBox').remove();
+  $('.overlay').remove();
 }
