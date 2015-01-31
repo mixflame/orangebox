@@ -6,7 +6,7 @@ show_msgbox = function(msg, buttons, options) {
   $('.overlay').show();
   $('.orangeBox').addClass("orangeBox-show");
   $('.orangeBoxText').html(msg);
-  $('.icon-close').click(hide_msgbox);
+  $('.orangeCloseButton').click(hide_msgbox);
   if(buttons!=null){
     buttons.forEach(function(val, idx) {
       var buttonName = val[0];
