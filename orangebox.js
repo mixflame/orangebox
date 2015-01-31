@@ -17,7 +17,7 @@ show_msgbox = function(msg, buttons, options) {
   }
   if(options!=null){
     if(options["noClose"] == true) {
-      $('.icon-close').remove();
+      $('.orangeCloseButton').remove();
     }
   }
 }
@@ -27,4 +27,5 @@ hide_msgbox = function() {
   $('.orangeBoxWindow').css("display", "none");
   $('.overlay').hide();
   $('ul.orangeBoxButtons').html("");
+  $('.orangeBox').remove();
 }
