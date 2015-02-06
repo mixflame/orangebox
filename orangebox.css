@@ -28,12 +28,13 @@
     transform: translateY(0);
 }
 
-.orangeBox .icon-close {
+.orangeCloseButton {
   color: #000;
   position: absolute;
   top: 24px;
   right: 24px;
   cursor: pointer;
+  background-image: url('cross.png');
 }
 
 .orangeBoxFont {
