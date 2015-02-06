@@ -34,7 +34,7 @@
   top: 24px;
   right: 24px;
   cursor: pointer;
-  background-image: url('cross.png');
+  background-image: url('/packages/jsilvermdx:orangebox/cross.png');
 }
 
 .orangeBoxFont {
