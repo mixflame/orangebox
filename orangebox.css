@@ -33,8 +33,10 @@
   position: absolute;
   top: 24px;
   right: 24px;
+  height: 16px;
+  width: 16px;
   cursor: pointer;
-  background-image: url('cross.png');
+  background-image: url('cross.png') 16px 16px no-repeat;
 }
 
 .orangeBoxFont {
