@@ -2,6 +2,8 @@ ORANGEBOX
 
 A simple library for message dropdowns.
 
+Demo: http://orangebox-demo.meteor.com
+
 Usage
 
 Simply call:
