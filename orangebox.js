@@ -3,7 +3,7 @@ show_msgbox = function(msg, buttons, options) {
     $('body').prepend(Blaze.toHTML(Template.orangebox))
   }
   $('.orangeBoxWindow').css("display", "block");
-  $('.overlay').show();
+  prepare_overlay();
   $('.orangeBox').addClass("orangeBox-show");
   $('.orangeBoxText').html(msg);
   $('.orangeCloseButton').click(hide_msgbox);
@@ -31,6 +31,12 @@ hide_msgbox = function() {
   $('.orangeBox').remove();
   $('.overlay').remove();
   unlock_body();
+}
+
+prepare_overlay = function() {
+  $('.overlay').css("height", window.screen.height + "px");
+  $('.overlay').css("width", window.screen.width + "px");
+  $('.overlay').show();
 }
 
 lock_body = function() {
