@@ -20,6 +20,7 @@ show_msgbox = function(msg, buttons, options) {
       $('.orangeCloseButton').remove();
     }
   }
+  lock_body();
 }
 
 hide_msgbox = function() {
@@ -29,4 +30,17 @@ hide_msgbox = function() {
   $('ul.orangeBoxButtons').html("");
   $('.orangeBox').remove();
   $('.overlay').remove();
+  unlock_body();
+}
+
+lock_body = function() {
+  $('body').css("width", "100%");
+  $('body').css("height", "100%");
+  $('body').css('overflow', 'hidden');
+}
+
+unlock_body = function() {
+  $('body').css("width", "");
+  $('body').css("height", "");
+  $('body').css('overflow', '');
 }
