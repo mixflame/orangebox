@@ -14,5 +14,5 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
   api.addFiles(['orangebox.js', "orangebox.css", "orangebox.html", "cross.png"]);
   api.use(['templating'], 'client');
-  api.export(['show_msgbox', 'hide_msgbox'], ['client']);
+  api.export(['OrangeBox'], ['client']);
 });
