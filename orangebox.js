@@ -12,27 +12,26 @@ OrangeBox = {
     $('body').css('overflow', 'hidden');
   },
 
-  showMsg: function(msg, buttons, options) {
+  showMsg: function(options) {
     if($('.orangeBox').size() == 0){
       $('body').prepend(Blaze.toHTML(Template.orangebox))
     }
     $('.orangeBoxWindow').css("display", "block");
     this.prepareOverlay();
     $('.orangeBox').addClass("orangeBox-show");
-    $('.orangeBoxText').html(msg);
+    $('.orangeBoxText').html(options['msg']);
     $('.orangeCloseButton').click(this.hideMsg);
+    var buttons = options["buttons"]
     if(buttons!=null){
       _.map(buttons, function(val, key){
         var buttonName = key;
         var buttonCallback = val;
-        $('ul.orangeBoxButtons').append("<li><span class='" + buttonName.toLowerCase() + "'>"+buttonName+"</span></li>");
-        $('.'+buttonName.toLowerCase()).click(buttonCallback);
+        $('ul.orangeBoxButtons').append("<li><span class='" + buttonName.toLowerCase().replace(" ", "-") + "'>"+buttonName+"</span></li>");
+        $('.'+buttonName.toLowerCase().replace(" ", "-")).click(buttonCallback);
       });
     }
-    if(options!=null){
-      if(options["noClose"] == true) {
-        $('.orangeCloseButton').remove();
-      }
+    if(options["noClose"] == true) {
+      $('.orangeCloseButton').remove();
     }
     this.lockBody();
   },
