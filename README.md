@@ -9,10 +9,10 @@ Usage
 Simply call:
 
 ```
-OrangeBox.showMsg("Description", {"Button Name": callback, "Button #2": callback2}, {noClose: false});
+OrangeBox.showMsg({msg: "Description", buttons: {"Button Name": callback, "Button #2": callback2}, noClose: false});
 ```
 
-It will insert itself into the dom and display itself with this call.
+It will insert itself into the dom and display itself with this call. The noClose option allows enabling or disabling the X button on the message box.
 
 
 To hide all messageboxes

@@ -26,8 +26,9 @@ OrangeBox = {
       _.map(buttons, function(val, key){
         var buttonName = key;
         var buttonCallback = val;
-        $('ul.orangeBoxButtons').append("<li><span class='" + buttonName.toLowerCase().replace(" ", "-") + "'>"+buttonName+"</span></li>");
-        $('.'+buttonName.toLowerCase().replace(" ", "-")).click(buttonCallback);
+        var buttonClass = buttonName.toLowerCase().replace(/[^\w]/gi, '')
+        $('ul.orangeBoxButtons').append("<li><span class='" + buttonClass + "'>"+buttonName+"</span></li>");
+        $('.'+buttonClass).click(buttonCallback);
       });
     }
     if(options["noClose"] == true) {
