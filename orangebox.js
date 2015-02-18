@@ -1,26 +1,26 @@
 OrangeBox = {
 
-  prepare_overlay: function() {
+  prepareOverlay: function() {
     $('.overlay').css('top', window.pageYOffset);
     $('.overlay').css('left', window.pageXOffset);
     $('.overlay').show();
   },
 
-  lock_body: function() {
+  lockBody: function() {
     $('body').css("width", "100%");
     $('body').css("height", "100%");
     $('body').css('overflow', 'hidden');
   },
 
-  show_msgbox: function(msg, buttons, options) {
+  showMsg: function(msg, buttons, options) {
     if($('.orangeBox').size() == 0){
       $('body').prepend(Blaze.toHTML(Template.orangebox))
     }
     $('.orangeBoxWindow').css("display", "block");
-    this.prepare_overlay();
+    this.prepareOverlay();
     $('.orangeBox').addClass("orangeBox-show");
     $('.orangeBoxText').html(msg);
-    $('.orangeCloseButton').click(this.hide_msgbox);
+    $('.orangeCloseButton').click(this.hideMsg);
     if(buttons!=null){
       buttons.forEach(function(val, idx) {
         var buttonName = val[0];
@@ -34,10 +34,10 @@ OrangeBox = {
         $('.orangeCloseButton').remove();
       }
     }
-    this.lock_body();
+    this.lockBody();
   },
 
-  hide_msgbox: function() {
+  hideMsg: function() {
     $('body').css("width", "");
     $('body').css("height", "");
     $('body').css('overflow', '');
