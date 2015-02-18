@@ -34,10 +34,14 @@ OrangeBox = {
     if(options["noClose"] == true) {
       $('.orangeCloseButton').remove();
     }
+    if(options["keyup"]!=null){
+      $(window).keyup(options["keyup"]);
+    }
     this.lockBody();
   },
 
   hideMsg: function() {
+    $(window).keyup(null);
     $('body').css("width", "");
     $('body').css("height", "");
     $('body').css('overflow', '');
