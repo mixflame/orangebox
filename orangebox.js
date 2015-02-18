@@ -22,12 +22,12 @@ OrangeBox = {
     $('.orangeBoxText').html(msg);
     $('.orangeCloseButton').click(this.hideMsg);
     if(buttons!=null){
-      buttons.forEach(function(val, idx) {
-        var buttonName = val[0];
-        var buttonCallback = val[1];
+      _.map(buttons, function(val, key){
+        var buttonName = key;
+        var buttonCallback = val;
         $('ul.orangeBoxButtons').append("<li><span class='" + buttonName.toLowerCase() + "'>"+buttonName+"</span></li>");
         $('.'+buttonName.toLowerCase()).click(buttonCallback);
-      })
+      });
     }
     if(options!=null){
       if(options["noClose"] == true) {
