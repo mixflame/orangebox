@@ -1,11 +1,5 @@
 OrangeBox = {
 
-  prepareOverlay: function() {
-    $('.overlay').css('top', window.pageYOffset);
-    $('.overlay').css('left', window.pageXOffset);
-    $('.overlay').show();
-  },
-
   lockBody: function() {
     $('body').css("width", "100%");
     $('body').css("height", "100%");
@@ -17,7 +11,7 @@ OrangeBox = {
       $('body').prepend(Blaze.toHTML(Template.orangebox))
     }
     $('.orangeBoxWindow').css("display", "block");
-    this.prepareOverlay();
+    $('.overlay').show();
     $('.orangeBox').addClass("orangeBox-show");
     $('.orangeBoxText').html(options['msg']);
     $('.orangeCloseButton').click(this.hideMsg);
