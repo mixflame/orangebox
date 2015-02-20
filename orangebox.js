@@ -32,6 +32,8 @@ OrangeBox = {
       $(window).keyup(options["keyup"]);
     }
     this.lockBody();
+    var boxHeight = $('.orangeBox').height();
+    $('.orangeBox').css('margin-top', "-" + boxHeight / 2 + "px");
   },
 
   hideMsg: function() {
