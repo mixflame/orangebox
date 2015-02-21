@@ -32,7 +32,7 @@ OrangeBox = {
       $(window).keyup(options["keyup"]);
     }
     this.lockBody();
-    var boxHeight = $('.orangeBox').height();
+    var boxHeight = $('.orangeBox').outerHeight();
     $('.orangeBox').css('margin-top', "-" + boxHeight / 2 + "px");
   },
 
