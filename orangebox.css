@@ -1,93 +1,81 @@
 /* orangebox.css */
+.overlay {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index: 999;
+}
 
-.show {
-  display: block;
+.orangeBox * {
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .orangeBox {
-  background: #ffcd50;
-  padding: 24px 24px 24px 24px;
-  z-index: 100;
-  left: 50%;
-  top: 50%;
-  position: fixed;
-  width: 300px;
-  margin-left: -150px;
-  -ms-transform: translateY(-400px); 
+    background: #ffcd50;
+    color: #333;
+    font: 13px/16px sans-serif; 
+    padding: 40px 24px 24px;
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    width: 300px;
+    margin-left: -150px;
+    -ms-transform: translateY(-400px); 
     -webkit-transform: translateY(-400px); 
     transform: translateY(-400px);
     -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  z-index: 2000;
+    transition: transform 0.3s;
+    z-index: 1000;
 }
 
 .orangeBox-show {
-  
-  -ms-transform: translateY(0); 
+    -ms-transform: translateY(0); 
     -webkit-transform: translateY(0); 
     transform: translateY(0);
 }
 
 .orangeCloseButton {
-  color: #000;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  height: 16px;
-  width: 16px;
-  cursor: pointer;
-  background-image: url('cross.png');
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    background: transparent url('cross.png') no-repeat 0 0;
+    background-size: 16px 16px;
 }
 
-.orangeBoxFont {
-  color: #333;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: sans-serif;
-}
-
-.orangeBoxFont p {
-  font-size: 12px;
-  line-height: 16px;
-  margin-top: 12px;
+.orangeBox p {
+    margin: 0;
 }
 
 .orangeBoxWindow ul {
-  margin-top: 24px;
+    margin: 12px 0 0 -12px;
+    padding: 0;
+    overflow: hidden;
 }
 
 .orangeBoxWindow ul li {
-  width: 50%;
-  float: left;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  list-style-type: none !important;
+    float: left;
+    font-weight: 700;
+    list-style-type: none;
+    padding-left: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
 }
 
 .orangeBoxWindow ul li span {
-  border: 2px solid #333;
-  padding: 8px 20px;
-  border-radius: 2px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.cf { zoom: 1; }
-.cf:before,
-.cf:after { content: ""; display: table; }
-.cf:after { clear: both; }
-
-.overlay {
-  display: none;
-  background: rgba(0, 0, 0, 0.5);
-  position:fixed;
-  width:100%;
-  height:100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+    border: 2px solid #333;
+    border-radius: 2px;
+    cursor: pointer;
+    display: block;
+    line-height: 1;
+    padding: 10px 5px;
 }
