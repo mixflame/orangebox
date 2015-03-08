@@ -1,6 +1,6 @@
 Package.describe({
   name: 'jsilvermdx:orangebox',
-  version: '0.0.32',
+  version: '0.0.33',
   // Brief, one-line summary of the package.
   summary: 'A simple, lightweight message box library',
   // URL to the Git repository containing the source code for this package.

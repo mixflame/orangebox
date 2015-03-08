@@ -8,13 +8,13 @@ Usage
 
 Simply call:
 
-```
+```javascript
 OrangeBox.showMsg({msg: "Description", buttons: {"Button Name": callback, "Button #2": callback2}, noClose: false, keyup: keyupFunction});
 ```
 
 It will insert itself into the dom and display itself with this call. The noClose option allows enabling or disabling the X button on the message box. keyup allows you to add some code to close if enter is pressed.
 
-```
+```javascript
 window.alert = function(msg) {
   OrangeBox.showMsg({
     msg: msg, 
@@ -29,9 +29,24 @@ window.alert = function(msg) {
 }
 ```
 
+To theme the OrangeBox:
+
+```javascript
+var themeObj = {
+  backColor: '#000000', //background color
+  fontColor: '#FFFFFF', //font color
+  font: "serif 20px", //font
+  height: "100px", //window height
+  width: "200px", //window width
+  buttonTextColor: "white", //button text color
+  buttonBorder: "1px solid #333" //button border
+}
+OrangeBox.showMsg({msg: "Description", theme: themeObj, buttons: {"Button Name": callback, "Button #2": callback2}, noClose: false, keyup: keyupFunction});
+```
+
 To hide all messageboxes
 
-```
+```javascript
 OrangeBox.hideMsg();
 ```
 
