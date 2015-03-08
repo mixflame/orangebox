@@ -34,6 +34,23 @@ OrangeBox = {
     this.lockBody();
     var boxHeight = $('.orangeBox').outerHeight();
     $('.orangeBox').css('margin-top', "-" + boxHeight / 2 + "px");
+    var theme = options["theme"];
+    if(theme){
+      var height = theme["height"];
+      if(height) $('.orangeBox').css('height', height);
+      var width = theme["width"];
+      if(width) $('.orangeBox').css('width', width);
+      var backColor = theme["backColor"];
+      if(backColor) $('.orangeBox').css('background', backColor);
+      var font = theme["font"];
+      if(font) $('.orangeBoxText').css('font', font);
+      var fontColor = theme["fontColor"];
+      if(fontColor) $('.orangeBoxText').css('color', fontColor);
+      var buttonBorder = theme["buttonBorder"];
+      if(buttonBorder) $('.orangeBoxWindow ul li span').css("border", buttonBorder);
+      var buttonTextColor = theme["buttonTextColor"];
+      if(buttonTextColor) $('.orangeBoxWindow ul li span').css('color', buttonTextColor);
+    }
   },
 
   hideMsg: function() {
