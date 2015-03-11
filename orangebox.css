@@ -51,6 +51,11 @@
     background-size: 16px 16px;
 }
 
+.orangeBoxTitle {
+	font-size: 150%;
+	margin-bottom: 12px;
+}
+
 .orangeBox p {
     margin: 0;
 }

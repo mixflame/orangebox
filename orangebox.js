@@ -14,6 +14,7 @@ OrangeBox = {
     $('.overlay').show();
     $('.orangeBox').addClass("orangeBox-show");
     $('.orangeBoxText').html(options['msg']);
+    $('.orangeBoxTitle').html(options['title']);
     $('.orangeCloseButton').click(this.hideMsg);
     var buttons = options["buttons"]
     if(buttons!=null){
