@@ -40,6 +40,8 @@ var themeObj = {
   width: "200px", //window width
   buttonTextColor: "white", //button text color
   buttonBorder: "1px solid #333" //button border
+  titleFont: "verdana", // title font
+  titleFontColor: "white" // title font color
 }
 OrangeBox.showMsg({msg: "Description", theme: themeObj, buttons: {"Button Name": callback, "Button #2": callback2}, noClose: false, keyup: keyupFunction});
 ```

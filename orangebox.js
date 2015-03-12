@@ -42,13 +42,21 @@ OrangeBox = {
       var backColor = theme["backColor"];
       if(backColor) $('.orangeBox').css('background', backColor);
       var font = theme["font"];
-      if(font) $('.orangeBoxText').css('font', font);
+      if(font) $('.orangeBoxText').css('font-family', font);
+      var fontSize = theme["fontSize"];
+      if(fontSize) $('.orangeBoxText').css('font-size', fontSize);
       var fontColor = theme["fontColor"];
       if(fontColor) $('.orangeBoxText').css('color', fontColor);
       var buttonBorder = theme["buttonBorder"];
       if(buttonBorder) $('.orangeBoxWindow ul li span').css("border", buttonBorder);
       var buttonTextColor = theme["buttonTextColor"];
       if(buttonTextColor) $('.orangeBoxWindow ul li span').css('color', buttonTextColor);
+      var titleFont = theme["titleFont"];
+      if(titleFont) $('.orangeBoxTitle').css('font-family', titleFont);
+      var titleFontColor = theme["titleFontColor"];
+      if(titleFontColor) $('.orangeBoxTitle').css('color', titleFontColor);
+      var titleFontSize = theme["titleFontSize"];
+      if(titleFontSize) $('.orangeBoxTitle').css('font-size', titleFontSize);
     }
     var boxHeight = $('.orangeBox').outerHeight();
     $('.orangeBox').css('margin-top', "-" + boxHeight / 2 + "px");
