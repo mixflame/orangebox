@@ -14,6 +14,7 @@ OrangeBox = {
     $('.overlay').show();
     $('.orangeBox').addClass("orangeBox-show");
     $('.orangeBoxText').html(options['msg']);
+    $('.orangeBoxTitle').html(options['title']);
     $('.orangeCloseButton').click(this.hideMsg);
     var buttons = options["buttons"]
     if(buttons!=null){
@@ -32,8 +33,6 @@ OrangeBox = {
       $(window).keyup(options["keyup"]);
     }
     this.lockBody();
-    var boxHeight = $('.orangeBox').outerHeight();
-    $('.orangeBox').css('margin-top', "-" + boxHeight / 2 + "px");
     var theme = options["theme"];
     if(theme){
       var height = theme["height"];
@@ -51,6 +50,10 @@ OrangeBox = {
       var buttonTextColor = theme["buttonTextColor"];
       if(buttonTextColor) $('.orangeBoxWindow ul li span').css('color', buttonTextColor);
     }
+    var boxHeight = $('.orangeBox').outerHeight();
+    $('.orangeBox').css('margin-top', "-" + boxHeight / 2 + "px");
+    var boxWidth = $('.orangeBox').outerWidth();
+    $('.orangeBox').css('margin-left', "-" + boxWidth / 2 + "px");
   },
 
   hideMsg: function() {
