@@ -1,5 +1,7 @@
 OrangeBox = {
 
+  faded: false,
+
   lockBody: function() {
     $('body').css("width", "100%");
     $('body').css("height", "100%");
@@ -62,9 +64,26 @@ OrangeBox = {
     $('.orangeBox').css('margin-top', "-" + boxHeight / 2 + "px");
     var boxWidth = $('.orangeBox').outerWidth();
     $('.orangeBox').css('margin-left', "-" + boxWidth / 2 + "px");
+    if(options["fade"]==true){
+      $('.orangeBox').hide();
+      $('.orangeBox').fadeIn('slow');
+      OrangeBox.faded = true;
+    } else {
+      OrangeBox.faded = false;
+    }
   },
 
   hideMsg: function() {
+    if(OrangeBox.faded==true){
+      $('.orangeBox').fadeOut('slow', function() {
+        OrangeBox.destroy()
+      });
+    } else {
+      OrangeBox.destroy();
+    }
+  },
+
+  destroy: function() {
     $(window).keyup(null);
     $('body').css("width", "");
     $('body').css("height", "");
