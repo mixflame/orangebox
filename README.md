@@ -1,10 +1,10 @@
-ORANGEBOX
+# ORANGEBOX
 
 A simple library for message dropdowns.
 
 Demo: http://orangebox-demo.meteor.com
 
-Usage
+## Usage
 
 Simply call:
 
@@ -29,7 +29,7 @@ window.alert = function(msg) {
 }
 ```
 
-To theme the OrangeBox:
+## To theme the OrangeBox:
 
 ```javascript
 var themeObj = {
@@ -48,13 +48,13 @@ var themeObj = {
 OrangeBox.showMsg({msg: "Description", theme: themeObj, buttons: {"Button Name": callback, "Button #2": callback2}, noClose: false, keyup: keyupFunction});
 ```
 
-To add a fade in, use:
+## To add a fade in, use:
 
 ```
 OrangeBox.showMsg({fade: true, msg: "Example message"});
 ```
 
-To hide all messageboxes
+## To hide all messageboxes
 
 ```javascript
 OrangeBox.hideMsg();
