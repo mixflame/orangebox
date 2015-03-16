@@ -34,6 +34,12 @@ OrangeBox = {
     if(options["keyup"]!=null){
       $(window).keyup(options["keyup"]);
     }
+    
+	var buttonCount = $('.orangeBoxButtons > li').length; //count the buttons, if there's only one button, make it full width
+	if (buttonCount == 1) {
+		$('.orangeBoxButtons > li').css('width', '100%');
+	}
+    
     this.lockBody();
     var theme = options["theme"];
     if(theme){
