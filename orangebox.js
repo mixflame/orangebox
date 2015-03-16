@@ -13,7 +13,7 @@ OrangeBox = {
       $('body').prepend(Blaze.toHTML(Template.orangebox))
     }
     $('.orangeBoxWindow').css("display", "block");
-    $('.overlay').show();
+    $('.orangeBox-overlay').show();
     $('.orangeBox').addClass("orangeBox-show");
     $('.orangeBoxText').html(options['msg']);
     $('.orangeBoxTitle').html(options['title']);
@@ -96,10 +96,10 @@ OrangeBox = {
     $('body').css('overflow', '');
     $('.orangeBox').removeClass("orangeBox-show");
     $('.orangeBoxWindow').css("display", "none");
-    $('.overlay').hide();
+    $('.orangeBox-overlay').hide();
     $('ul.orangeBoxButtons').html("");
     $('.orangeBox').remove();
-    $('.overlay').remove();
+    $('.orangeBox-overlay').remove();
   }
 
 }
